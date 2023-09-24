@@ -14,6 +14,7 @@ struct TextFieldComponent: View {
     //-------------------------------------
     let textFieldPlaceholder: String
     @Binding var textType: String
+    var height: CGFloat
     
     //-------------------------------------
     //MARK: - View
@@ -21,12 +22,12 @@ struct TextFieldComponent: View {
     var body: some View {
         TextField("\(textFieldPlaceholder)", text: $textType)
             .textInputAutocapitalization(.never)
-            .modifier(TextFieldModifier())
+            .modifier(TextFieldModifier(height: height))
     }
 }
 
 struct TextFieldComponent_Previews: PreviewProvider {
     static var previews: some View {
-        TextFieldComponent(textFieldPlaceholder: "Enter email", textType: .constant(""))
+        TextFieldComponent(textFieldPlaceholder: "Enter email", textType: .constant(""), height: 45)
     }
 }
