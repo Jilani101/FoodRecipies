@@ -27,6 +27,7 @@
 		1C8735262AB7452C009B0C42 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8735252AB7452C009B0C42 /* TextFieldModifier.swift */; };
 		1C87352A2AB745F3009B0C42 /* UserTextFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8735292AB745F3009B0C42 /* UserTextFieldsView.swift */; };
 		1C87352C2AB83A58009B0C42 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C87352B2AB83A58009B0C42 /* Constant.swift */; };
+		1CAF563F2AC6B5190084BB75 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF563E2AC6B5190084BB75 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		1C8735252AB7452C009B0C42 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
 		1C8735292AB745F3009B0C42 /* UserTextFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTextFieldsView.swift; sourceTree = "<group>"; };
 		1C87352B2AB83A58009B0C42 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		1CAF563E2AC6B5190084BB75 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 		1C8734FF2AB735B1009B0C42 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				1CAF563E2AC6B5190084BB75 /* SignUpView.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				1C8735262AB7452C009B0C42 /* TextFieldModifier.swift in Sources */,
 				1C87351C2AB73F51009B0C42 /* Color+Extension.swift in Sources */,
 				1C8734E82AB73522009B0C42 /* FoodRecipiesApp.swift in Sources */,
+				1CAF563F2AC6B5190084BB75 /* SignUpView.swift in Sources */,
 				1C87352A2AB745F3009B0C42 /* UserTextFieldsView.swift in Sources */,
 				1C8735232AB74505009B0C42 /* TextFieldComponent.swift in Sources */,
 				1C87352C2AB83A58009B0C42 /* Constant.swift in Sources */,
