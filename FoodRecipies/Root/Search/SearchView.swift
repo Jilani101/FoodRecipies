@@ -8,8 +8,28 @@
 import SwiftUI
 
 struct SearchView: View {
+    
+    //-------------------------------------
+    //MARK: - Variable
+    //-------------------------------------
+    @Environment(\.dismiss) var dismiss
+    
+    //-------------------------------------
+    //MARK: - View
+    //-------------------------------------
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Search")
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Image(systemName: "chevron.left")
+                    .imageScale(.large)
+                    .onTapGesture {
+                        dismiss()
+                    }
+            }
+        }
     }
 }
 

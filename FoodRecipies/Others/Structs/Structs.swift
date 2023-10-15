@@ -9,19 +9,18 @@ import Foundation
 import SwiftUI
 
 //-------------------------------------
-//MARK: - Tab screen item
+//MARK: - Category class
 //-------------------------------------
-struct Item {
-    let title: String
-    let color: Color
-    let icon: String
-}
-
-extension Item {
-    static let tabItemArray: [Item] = [
-        Item(title: "cart", color: .red, icon: "cart"),
-        Item(title: "house", color: .blue, icon: "house"),
-        Item(title: "car", color: .green, icon: "car"),
-        Item(title: "plane", color: .green, icon: "car"),
-    ]
+class Categories: Identifiable, ObservableObject {
+    let id: String
+    let name: String
+    @Published var selectedCat: Bool
+    @Published var catColor: Color
+    
+    init(id: String, name: String, selectedCat: Bool, catColor: Color) {
+        self.id = id
+        self.name = name
+        self.selectedCat = selectedCat
+        self.catColor = catColor
+    }
 }

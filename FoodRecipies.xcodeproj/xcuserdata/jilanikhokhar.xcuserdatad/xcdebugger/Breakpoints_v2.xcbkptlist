@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "001E4BC3-675C-48E8-90CC-0183FBA15C5B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BEFA21AC-28E6-4979-A3CC-A2503D807E77"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodRecipies/Root/Home/Category/CategoryView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "updateCat(at:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BEFA21AC-28E6-4979-A3CC-A2503D807E77 - b269a3368e53e939"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodRecipies.CategoryView.updateCat(at: Swift.Int) -&gt; ()"
+                  moduleName = "FoodRecipies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jilanikhokhar/Documents/SwiftUI_Prac/FoodRecipies/FoodRecipies/Root/Home/Category/CategoryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "720">
+               </Location>
+               <Location
+                  uuid = "BEFA21AC-28E6-4979-A3CC-A2503D807E77 - b269a3368e53e939"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodRecipies.CategoryView.updateCat(at: Swift.Int) -&gt; ()"
+                  moduleName = "FoodRecipies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jilanikhokhar/Documents/SwiftUI_Prac/FoodRecipies/FoodRecipies/Root/Home/Category/CategoryView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "820">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
