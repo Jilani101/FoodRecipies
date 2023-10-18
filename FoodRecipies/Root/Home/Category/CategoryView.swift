@@ -12,53 +12,35 @@ struct CategoryView: View {
     //-------------------------------------
     //MARK: - Variables
     //-------------------------------------
-    @EnvironmentObject var catVM: CategoryViewModel
-    @State var selectedIndex: Int? = nil
+    @ObservedObject var catVM = CategoryViewModel()
+    @State var selectedIndex: Int? = 0
     
     //-------------------------------------
     //MARK: - View
     //-------------------------------------
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 20) {
+            LazyHStack(spacing: 20) {
                 ForEach(0 ..< self.catVM.categories.count, id: \.self) { index in
+                    let cat = self.catVM.categories[index]
                     Button {
-                        self.catVM.categories[index].selectedCat.toggle()
-                        self.updateCat(at: index)
+                        self.selectedIndex = index
                     } label: {
-                        Text(self.catVM.categories[index].name)
-                            .font(.setFamily(.semibold, size: 11))
-                            .foregroundStyle(self.catVM.categories[index].catColor)
-//                            .foregroundStyle()
+                        Text(cat.name)
+                            .font(.setFamily(.bold, size: 11))
+                            .foregroundColor(self.selectedIndex == index ? Color.white : Colors.primary_80)
                             .padding()
                             .frame(height: 40)
-                            .overlay {
-                                if index == 0 {
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .foregroundStyle(Colors.primary_80)
-                                } else if index == self.selectedIndex {
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .foregroundStyle(Colors.primary_80)
-                                }
-                            }
+                            .background(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .fill(self.selectedIndex == index ? Colors.primary_100 : Color.clear)
+                            )
                     }
                 }
             }
-            .padding(.horizontal, 10)
+//            .padding(.leading, 30)
         }
-    }
-    
-    func updateCat(at index: Int) {
-        for category in 0 ..< self.catVM.categories.count {
-            if category != index {
-                self.catVM.categories[index].catColor = Colors.primary_80
-            } else {
-                self.catVM.categories[index].catColor = Color.white
-                print(index)
-            }
-        }
-        
-        self.selectedIndex = index
+        .frame(height: 51)
     }
 }
 
