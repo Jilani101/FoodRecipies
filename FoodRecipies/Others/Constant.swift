@@ -53,4 +53,22 @@ struct Colors {
     
     // green
     static let green = Color(hex: "#31B057")
+    
+    // shadow
+    static let clr_shadow = Color(hex: "#20202026")
+}
+
+//-------------------------------------
+//MARK: - Category class
+//-------------------------------------
+class Categories: Identifiable, ObservableObject {
+    let id: String
+    let name: String
+    @Published var catColor: Color
+    
+    init(id: String, name: String, catColor: Color) {
+        self.id = id
+        self.name = name
+        self.catColor = catColor
+    }
 }
