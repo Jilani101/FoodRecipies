@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C6F3CC52AE0F867000899FD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6F3CC42AE0F867000899FD /* Category.swift */; };
 		1C8734E82AB73522009B0C42 /* FoodRecipiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8734E72AB73522009B0C42 /* FoodRecipiesApp.swift */; };
 		1C8734EA2AB73522009B0C42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8734E92AB73522009B0C42 /* ContentView.swift */; };
 		1C8734EC2AB73524009B0C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C8734EB2AB73524009B0C42 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C6F3CC42AE0F867000899FD /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		1C8734E42AB73522009B0C42 /* FoodRecipies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodRecipies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8734E72AB73522009B0C42 /* FoodRecipiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecipiesApp.swift; sourceTree = "<group>"; };
 		1C8734E92AB73522009B0C42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 				1CC8D1552ADE5C560061BBFE /* User.swift */,
 				1CC8D1572ADE5C6A0061BBFE /* Recipes.swift */,
 				1CC8D1592ADE5C940061BBFE /* Ratings.swift */,
+				1C6F3CC42AE0F867000899FD /* Category.swift */,
 			);
 			path = UserModels;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				1C87351E2AB7439F009B0C42 /* SignInView.swift in Sources */,
 				1C8734EA2AB73522009B0C42 /* ContentView.swift in Sources */,
 				1CC8D15F2ADED4E90061BBFE /* Float+Extension.swift in Sources */,
+				1C6F3CC52AE0F867000899FD /* Category.swift in Sources */,
 				1CC8D1432AD67C480061BBFE /* SavedRecipeView.swift in Sources */,
 				1CC8D1562ADE5C560061BBFE /* User.swift in Sources */,
 				1CC8D1502ADD54CA0061BBFE /* RecipeCardView.swift in Sources */,
