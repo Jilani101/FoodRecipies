@@ -13,13 +13,13 @@ class CategoryViewModel: ObservableObject {
     //-------------------------------------
     //MARK: - Variable
     //-------------------------------------
-    let categories: [Categories] = [
-        Categories(id: UUID().uuidString, name: "All", catColor: Colors.primary_80),
-        Categories(id: UUID().uuidString, name: "Indian", catColor: Colors.primary_80),
-        Categories(id: UUID().uuidString, name: "Italian", catColor: Colors.primary_80),
-        Categories(id: UUID().uuidString, name: "Asian", catColor: Colors.primary_80),
-        Categories(id: UUID().uuidString, name: "Chinese", catColor: Colors.primary_80),
-        Categories(id: UUID().uuidString, name: "Maxican", catColor: Colors.primary_80)
+    static let categories: [Category] = [
+        Category(id: UUID().uuidString, name: "All", catType: .all),
+        Category(id: UUID().uuidString, name: "Indian", catType: .indian),
+        Category(id: UUID().uuidString, name: "Italian", catType: .italian),
+        Category(id: UUID().uuidString, name: "Asian", catType: .asian),
+        Category(id: UUID().uuidString, name: "Chinese", catType: .chinese),
+        Category(id: UUID().uuidString, name: "Maxican", catType: .maxican)
     ]
     
     

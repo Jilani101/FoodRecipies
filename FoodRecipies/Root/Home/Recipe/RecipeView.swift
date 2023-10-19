@@ -11,7 +11,7 @@ struct RecipeView: View {
     //-------------------------------------
     //MARK: - Variables
     //-------------------------------------
-    
+    @EnvironmentObject var recipeVM: RecipeViewModel
     
     //-------------------------------------
     //MARK: - View
@@ -20,12 +20,18 @@ struct RecipeView: View {
         NavigationStack {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(Recipes.recipes) { recp in
-                        RecipeCardView(recipe: recp)
+                    ForEach(self.recipeVM.selectedCategory == .all ? Recipes.recipes : self.recipeVM.filteredItems) { recp in
+                            RecipeCardView(recipe: recp)
                     }
                 }
-                .padding(.leading, 50)
+                .padding(.top, 75)
             }
+            .padding(.top, 10)
+            .padding(.trailing, 20)
+            .padding(.bottom, 20)
+        }
+        .onAppear {
+            self.recipeVM.filteredItems = Recipes.recipes
         }
     }
 }

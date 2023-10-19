@@ -13,6 +13,7 @@ struct HomeView: View {
     //MARK: - Variable
     //-------------------------------------
     @State var searchText: String = ""
+    @StateObject var recipeVM = RecipeViewModel()
     
     //-------------------------------------
     //MARK: - View
@@ -89,23 +90,14 @@ struct HomeView: View {
                 
                 //MARK: - Category view
                 CategoryView()
-                    .environmentObject(CategoryViewModel())
+                    .environmentObject(self.recipeVM)
                     .padding(.bottom, 15)
                     .padding(.leading, 30)
                 
-                ScrollView {
+                ScrollView(showsIndicators: false) {
                     //MARK: - Recipes
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(Recipes.recipes) { recp in
-                                RecipeCardView(recipe: recp)
-                            }
-                        }
-                        .padding(.top, 75)
-                    }
-                    .padding(.top, 10)
-                    .padding(.trailing, 20)
-                    .padding(.bottom, 20)
+                    RecipeView()
+                        .environmentObject(self.recipeVM)
                     Spacer()
                     
                     //MARK: - New Recipes by Creator

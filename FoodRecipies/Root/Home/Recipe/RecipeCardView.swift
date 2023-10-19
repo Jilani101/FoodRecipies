@@ -90,5 +90,5 @@ struct RecipeCardView: View {
 }
 
 #Preview {
-    RecipeCardView(recipe: Recipes(id: UUID().uuidString, recipeName: "Classic Greek Salad", recipeImage: "img_recipe_1", cookingTime: "15", rating: Ratings.ratings[0], user: User(id: NSUUID().uuidString, email: "", fullName: "James Milner", profileImage: "profile_image", userOccupation: "chef", bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱")))
+    RecipeCardView(recipe: Recipes(id: UUID().uuidString, recipeName: "Classic Greek Salad", recipeImage: "img_recipe_1", cookingTime: "15", rating: Ratings.ratings[0], user: User(id: NSUUID().uuidString, email: "", fullName: "James Milner", profileImage: "profile_image", userOccupation: "chef", bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱"), recipeType: .all))
 }

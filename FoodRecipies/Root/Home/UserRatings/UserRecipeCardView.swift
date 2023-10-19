@@ -97,5 +97,5 @@ struct UserRecipeCardView: View {
                 fullName: "James Milner",
                 profileImage: "profile_image",
                 userOccupation: "chef",
-                bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱")))
+                bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱"), recipeType: .all))
 }
