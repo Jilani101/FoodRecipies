@@ -68,21 +68,8 @@ struct RecipeCardView: View {
                 .padding(.top, 19)
                 .padding(.bottom, 10)
             }
-            ZStack {
-                Colors.secondary_20
-                    .frame(width: 65, height: 30)
-                    .cornerRadius(20)
-                HStack(spacing: 5) {
-                    Image("icn_star")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 18, height: 18)
-                    Text("0.0".numberFormatter(number: recipe.rating!.rating))
-                        .font(.setFamily(.regular, size: 14))
-                }
-            }
-            .frame(maxWidth: .infinity, alignment: .trailing)
-            .padding(.top, -165)
+            RatingView(recipe: recipe, widht: 65, height: 30, imageWidth: 18, imageHeight: 18, fontSize: 14)
+                .padding(.top, -165)
         }
         .frame(width: 200, height: 260, alignment: .center)
         .padding(.leading, 30)
@@ -90,5 +77,22 @@ struct RecipeCardView: View {
 }
 
 #Preview {
-    RecipeCardView(recipe: Recipes(id: UUID().uuidString, recipeName: "Classic Greek Salad", recipeImage: "img_recipe_1", cookingTime: "15", rating: Ratings.ratings[0], user: User(id: NSUUID().uuidString, email: "", fullName: "James Milner", profileImage: "profile_image", userOccupation: "chef", bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱")))
+    RecipeCardView(recipe:
+                    Recipes(
+                        id: UUID().uuidString,
+                        recipeName: "Classic Greek Salad",
+                        recipeImage: "img_recipe_1",
+                        cookingTime: "15",
+                        rating:
+                            Ratings.ratings[0],
+                        user:
+                            User(
+                                id: NSUUID().uuidString,
+                                email: "",
+                                fullName: "James Milner",
+                                profileImage: "profile_image",
+                                userOccupation: "chef",
+                                bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱"),
+                        recipeType: .all)
+    )
 }

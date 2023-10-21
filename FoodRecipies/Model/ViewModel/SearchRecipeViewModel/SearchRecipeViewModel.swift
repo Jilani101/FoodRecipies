@@ -1,22 +1,20 @@
 //
-//  CategoryViewModel.swift
+//  SearchRecipeViewModel.swift
 //  FoodRecipies
 //
-//  Created by jilani khokhar on 11/10/23.
+//  Created by jilani khokhar on 20/10/23.
 //
 
-import Foundation
 import SwiftUI
 
-class CategoryViewModel: ObservableObject {
+class SearchRecipeViewModel: ObservableObject {
     
     //-------------------------------------
     //MARK: - Variable
     //-------------------------------------
-    
-    
+        
+
     //-------------------------------------
-    //MARK: - functions
+    //MARK: - View
     //-------------------------------------
-    
 }

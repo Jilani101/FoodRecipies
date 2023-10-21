@@ -12,7 +12,7 @@ struct HomeView: View {
     //-------------------------------------
     //MARK: - Variable
     //-------------------------------------
-    @State var searchText: String = ""
+    @StateObject var recipeVM = RecipeViewModel()
     
     //-------------------------------------
     //MARK: - View
@@ -66,22 +66,7 @@ struct HomeView: View {
                             }
                     }
                     Spacer()
-                    Button {
-                        print("Filter")
-                    } label: {
-                        ZStack {
-                            Rectangle()
-                                .fill(Colors.primary_100)
-                                .frame(width: 42, height: 42)
-                                .cornerRadius(12)
-                            Image("icn_filter")
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(.white)
-                        }
-                    }
-                    .padding(.trailing, 37)
+                    FilterButtonView()
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 30)
@@ -89,23 +74,13 @@ struct HomeView: View {
                 
                 //MARK: - Category view
                 CategoryView()
-                    .environmentObject(CategoryViewModel())
+                    .environmentObject(self.recipeVM)
                     .padding(.bottom, 15)
-                    .padding(.leading, 30)
                 
                 ScrollView {
                     //MARK: - Recipes
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(Recipes.recipes) { recp in
-                                RecipeCardView(recipe: recp)
-                            }
-                        }
-                        .padding(.top, 75)
-                    }
-                    .padding(.top, 10)
-                    .padding(.trailing, 20)
-                    .padding(.bottom, 20)
+                    RecipeView()
+                        .environmentObject(self.recipeVM)
                     Spacer()
                     
                     //MARK: - New Recipes by Creator
@@ -128,14 +103,10 @@ struct HomeView: View {
                         }
                     }
                 }
-                //            .padding(.leading, 30)
                 .padding(.bottom, 15)
-                
                 Spacer()
-                
             }
         }
-        //        .padding(.leading, 25)
     }
 }
 

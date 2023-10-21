@@ -12,7 +12,7 @@ struct CategoryView: View {
     //-------------------------------------
     //MARK: - Variables
     //-------------------------------------
-    @ObservedObject var catVM = CategoryViewModel()
+    @EnvironmentObject var recipeVM: RecipeViewModel
     @State var selectedIndex: Int? = 0
     
     //-------------------------------------
@@ -21,10 +21,12 @@ struct CategoryView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 20) {
-                ForEach(0 ..< self.catVM.categories.count, id: \.self) { index in
-                    let cat = self.catVM.categories[index]
+                ForEach(0 ..< Categories.categories.count, id: \.self) { index in
+                    let cat = Categories.categories[index]
                     Button {
                         self.selectedIndex = index
+                        self.recipeVM.filteredRecipes(recipes: Recipes.recipes, by: cat.catType)
+                        self.recipeVM.selectedCategory = cat.catType
                     } label: {
                         Text(cat.name)
                             .font(.setFamily(.bold, size: 11))
@@ -38,27 +40,9 @@ struct CategoryView: View {
                     }
                 }
             }
-//            .padding(.leading, 30)
+            .padding(.leading, 30)
         }
         .frame(height: 51)
-    }
-}
-
-struct SelectedCategory: View {
-    
-    //-------------------------------------
-    //MARK: - Variable
-    //-------------------------------------
-    @EnvironmentObject var category: Categories
-    
-    //-------------------------------------
-    //MARK: - View
-    //-------------------------------------
-    var body: some View {
-        Text(category.name)
-            .font(.setFamily(.semibold, size: 11))
-            .foregroundStyle(category.catColor)
-            .padding(.all, 15)
     }
 }
 

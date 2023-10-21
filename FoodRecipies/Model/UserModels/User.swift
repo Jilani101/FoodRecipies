@@ -24,11 +24,11 @@ struct User: Identifiable, Hashable, Codable {
 //--------------------------------------------
 extension User {
     static let users: [User] = [
-        User(id: NSUUID().uuidString, email: "", fullName: "James Milner", profileImage: "profile_image", userOccupation: "chef", bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱"),
-        User(id: NSUUID().uuidString, email: "", fullName: "James Milner", profileImage: "profile_image", userOccupation: "chef", bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱"),
-        User(id: NSUUID().uuidString, email: "", fullName: "James Milner", profileImage: "profile_image", userOccupation: "chef", bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱"),
-        User(id: NSUUID().uuidString, email: "", fullName: "James Milner", profileImage: "profile_image", userOccupation: "chef", bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱"),
-        User(id: NSUUID().uuidString, email: "", fullName: "James Milner", profileImage: "profile_image", userOccupation: "chef", bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱"),
+        User(id: NSUUID().uuidString, email: "", fullName: "Chef John", profileImage: "profile_image", userOccupation: "chef", bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱"),
+        User(id: NSUUID().uuidString, email: "", fullName: "Spicy Nelly", profileImage: "profile_image", userOccupation: "chef", bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱"),
+        User(id: NSUUID().uuidString, email: "", fullName: "Mark Kelvin", profileImage: "profile_image", userOccupation: "chef", bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱"),
+        User(id: NSUUID().uuidString, email: "", fullName: "Laura Wilson", profileImage: "profile_image", userOccupation: "chef", bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱"),
+        User(id: NSUUID().uuidString, email: "", fullName: "Chef John", profileImage: "profile_image", userOccupation: "chef", bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱"),
         User(id: NSUUID().uuidString, email: "", fullName: "James Milner", profileImage: "profile_image", userOccupation: "chef", bio: "Private Chef \nPassionate about food and life 🥘🍲🍝🍱"),
     ]
 }
