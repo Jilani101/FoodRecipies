@@ -22,6 +22,7 @@ struct TimeFilterView: View {
             Text("Time")
                 .font(.setFamily(.bold, size: 14))
                 .padding(.leading, 10)
+            
             LazyHStack {
                 ForEach(0 ..< TimeFilter.timeFilterArray.count, id: \.self) { index in
                     let filterArr = TimeFilter.timeFilterArray[index]
@@ -41,7 +42,6 @@ struct TimeFilterView: View {
                                             .fill(self.isSelected == index ? Colors.primary_100 : Color.clear)
                                     )
                             )
-                            .padding(.leading, 10)
                     }
                 }
             }

@@ -10,6 +10,6 @@ import SwiftUI
 struct CustomCornerRadius: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .roundedCorner(50, corners: [.topLeft, .topRight])
+            .roundedCorner(60, corners: [.topLeft, .topRight])
     }
 }
